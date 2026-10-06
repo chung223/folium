@@ -390,3 +390,20 @@ h3 { font-size: 1.2rem; line-height: 1.5; font-weight: 700; letter-spacing: .03e
     @keyframes reveal { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
   }
 }
+
+/* ── 實際畫面 ─────────────────────────── */
+.screens figure { margin: 0; }
+.screens img { display: block; width: 100%; height: auto; background: var(--sheet); border: 1px solid var(--hairline); box-shadow: var(--shadow); }
+.screens figcaption { margin-top: 14px; font: 400 14.5px/1.65 var(--sans); color: var(--ink-2); }
+.screens figcaption b { display: block; margin-bottom: 2px; font: 700 1.08rem/1.5 var(--serif); color: var(--ink); }
+.phones { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(18px, 3.4vw, 48px); align-items: start; }
+.phone img { border-radius: 12.5% / 5.75%; }
+.bigs { display: grid; grid-template-columns: minmax(0, .82fr) minmax(0, 1.5fr); gap: clamp(20px, 3.4vw, 48px); align-items: end; margin-top: clamp(40px, 6vw, 72px); }
+.tablet img { border-radius: 4.5% / 3.4%; }
+.mac img { border: 0; background: none; box-shadow: none; filter: drop-shadow(0 20px 30px rgba(28, 27, 24, .22)); }
+@media (prefers-color-scheme: dark) { .mac img { filter: drop-shadow(0 20px 34px rgba(0, 0, 0, .7)); } }
+@media (max-width: 760px) {
+  .phones { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 68%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 18px; margin-inline: calc(-1 * var(--gutter)); padding-inline: var(--gutter); scroll-padding-inline: var(--gutter); }
+  .phone { scroll-snap-align: start; }
+  .bigs { grid-template-columns: 1fr; }
+}
