@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<title>Folium 分享預覽圖</title>
+<!-- 產生 assets/og.png（1200×630）：見 README 的「分享預覽圖」。改了首屏示意圖就重跑。 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,500..700&family=LXGW+WenKai+TC:wght@400&family=Noto+Serif+TC:wght@400;700;800&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+  :root { color-scheme: light; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body { display: grid; grid-template-columns: 640px 560px; align-items: center; }
+  .copy { padding-left: 88px; }
+  .brand svg { width: 54px; height: 54px; }
+  .brand .wordmark { font-size: 46px; }
+  h1 { margin-top: 44px; font: 800 64px/1.22 var(--serif); letter-spacing: .015em; }
+  .sub { margin: 26px 0 0; font: 600 20px/1.5 var(--sans); letter-spacing: .14em; color: var(--ink-2); }
+  .hand { margin: 16px 0 0; font-size: 28px; }
+  .art { width: 520px; margin-top: 70px; transform: translateX(-20px); }
+  .draw { animation: none !important; stroke-dashoffset: 0 !important; }
+  .swipe { animation: none !important; transform: none !important; }
+  .appear, .rise { animation: none !important; opacity: 1 !important; transform: none !important; }
+  .stamp { animation: none !important; opacity: .92 !important; transform: rotate(-6deg) !important; }
+  .blink { animation: none !important; }
+</style>
+</head>
+<body>
+  <div class="copy">
+    <div class="brand">
+      <svg viewBox="0 0 1024 1024" aria-hidden="true"><path d="M512 92C360 176 246 324 256 496c7 116 42 196 88 262 40 56 104 82 168 82s128-26 168-82c46-66 81-146 88-262 10-172-104-320-256-404Z" fill="#fff" stroke="#1C1B18" stroke-width="48" stroke-linejoin="round"/><path d="M512 236v694M398 332l114 80M640 446l-128 98M406 600l106 74" fill="none" stroke="#4F5BD5" stroke-width="60" stroke-linecap="round"/></svg>
+      <span class="wordmark">Folium</span>
+    </div>
+    <h1>PDF，<br>像紙一樣好寫。</h1>
+    <p class="hand">也像專業軟體一樣，什麼都改得動。</p>
+    <p class="sub">iPhone・iPad・Mac 上的 PDF 與手寫 App</p>
+  </div>
+  <div class="art">
+<svg viewBox="0 0 560 700" role="img" aria-labelledby="art-title">
+        <title id="art-title">一頁合約上，有螢光筆、改過的金額、圈起來的條文、打勾的同意欄、手寫簽名，以及「已核准」印章。</title>
+        <defs>
+          <filter id="stamp-ink" x="-5%" y="-5%" width="110%" height="110%">
+            <feTurbulence type="fractalNoise" baseFrequency="1.7" numOctaves="2" seed="11" result="noise"/>
+            <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -3 2.45" result="mask"/>
+            <feComposite in="SourceGraphic" in2="mask" operator="in"/>
+          </filter>
+        </defs>
+        <g transform="rotate(-1.6 280 350)">
+          <g class="doc-shadow"><rect class="doc-sheet" x="50" y="36" width="460" height="628" rx="3"/></g>
+
+          <text class="doc-title" x="284" y="104" text-anchor="middle">合作協議書</text>
+          <text class="doc-s" x="280" y="132" text-anchor="middle">立協議書人：甲方（委託人）、乙方（受託人），雙方同意下列條款</text>
+          <line class="doc-rule" x1="92" y1="150" x2="468" y2="150"/>
+
+          <text class="doc-h" x="92" y="184">第一條　合作內容</text>
+          <rect class="marker swipe" style="--at:.95s" x="177" y="218" width="156" height="17" rx="3"/>
+          <text class="doc-t" x="92" y="208">甲乙雙方同意就品牌網站之設計與製作進行合作，</text>
+          <text class="doc-t" x="92" y="230">乙方應於簽約後三十日內交付第一版設計稿。</text>
+
+          <text class="doc-h" x="92" y="272">第二條　費用與付款</text>
+          <text class="doc-t" x="92" y="296">本案總費用為新臺幣</text>
+          <g class="appear" style="--at:1.4s">
+            <rect class="edit-box" x="207" y="282" width="56" height="19" rx="3"/>
+            <text class="doc-num" x="212" y="296" textLength="43" lengthAdjust="spacingAndGlyphs">52,000</text>
+          </g>
+          <line class="caret blink" style="--at:1.6s" x1="259" y1="285" x2="259" y2="298.5"/>
+          <text class="doc-t" x="268" y="296">元整，</text>
+          <text class="doc-t" x="92" y="318">簽約時支付百分之五十，</text>
+          <text class="doc-t" x="92" y="340">其餘款項於驗收完成後七日內支付。</text>
+          <path class="pen draw" pathLength="1" style="--at:1.75s;--d:.45s" d="M383 290c-34-17-74-19-106-6"/>
+          <path class="pen draw" pathLength="1" style="--at:2.15s;--d:.2s" d="M285 278l-9 6 10 4"/>
+          <text class="doc-note appear" style="--at:2.2s" x="388" y="296">金額改好了</text>
+
+          <text class="doc-h" x="92" y="382">第三條　保密義務</text>
+          <text class="doc-t" x="92" y="406">雙方對於合作過程中知悉之營業資訊，</text>
+          <text class="doc-t" x="92" y="428">均負保密義務，未經同意不得洩漏予第三人。</text>
+          <path class="pen draw" pathLength="1" style="--at:2.5s;--d:.6s" d="M297 393c-14-7-44-8-58-1-12 6-9 15 5 18 15 4 42 3 52-5 7-5 2-12-8-14"/>
+          <path class="pen draw" pathLength="1" style="--at:3.05s;--d:.4s" d="M384 392c-24-6-52-4-80 3"/>
+          <path class="pen draw" pathLength="1" style="--at:3.4s;--d:.2s" d="M313 388l-10 7 11 5"/>
+          <text class="doc-note appear" style="--at:3.45s" x="388" y="398">這條再確認</text>
+
+          <rect x="92" y="458" width="13" height="13" rx="2" fill="none" stroke="#1C1B18" stroke-width="1.2"/>
+          <text class="doc-t" x="114" y="469.5">同意以電子方式簽署本協議</text>
+          <path class="pen draw" pathLength="1" style="--at:3.85s;--d:.35s" d="M93 465c2 2 4 4 5.5 7 3-7 7-13 12.5-19"/>
+
+          <text class="doc-t" x="92" y="528">甲方簽名</text>
+          <line x1="152" y1="533" x2="330" y2="533" stroke="#8A857B" stroke-width="1"/>
+          <path class="ink-pen draw" pathLength="1" style="--at:4.25s;--d:1.3s" d="M164 524c5-17 17-27 22-19 4 7-6 22-10 19-5-3 9-14 18-11 9 3 1 15 8 15 9 0 12-20 21-18 8 2-1 18 9 17 11-1 13-19 23-17 8 2-2 16 10 14 13-2 21-12 41-20"/>
+          <path class="ink-pen draw" pathLength="1" style="--at:5.5s;--d:.35s" d="M180 540c44-6 92-9 142-15"/>
+          <text class="doc-t" x="92" y="568">日期：二〇二六年十月六日</text>
+
+          <g class="seal stamp" style="--at:5.95s" filter="url(#stamp-ink)">
+            <rect x="358" y="502" width="114" height="46" rx="3"/>
+            <text x="417.5" y="533" text-anchor="middle">已核准</text>
+          </g>
+
+          <text class="doc-s" x="280" y="640" text-anchor="middle">— 1 —</text>
+        </g>
+
+        <g class="dock appear" style="--at:.7s">
+          <rect class="capsule" x="150" y="652" width="260" height="44" rx="22"/>
+          <path class="tool active" d="M174 684l3-9 15-15 6 6-15 15-9 3Zm19-21 6 6"/>
+          <path class="tool" d="M211 683h14M213 679l9-17 7 4-9 17Z"/>
+          <path class="tool" d="M245 663h16M253 663v21"/>
+          <path class="tool" d="M276 666h16v12h-16ZM280 684h8"/>
+          <line x1="309" y1="664" x2="309" y2="684" stroke="#9B968C" stroke-width="1"/>
+          <circle cx="329" cy="674" r="7" fill="#1C1B18"/>
+          <circle cx="356" cy="674" r="7" fill="#4F5BD5"/>
+          <circle class="chip-on" cx="356" cy="674" r="11"/>
+          <circle cx="383" cy="674" r="7" fill="#D63A2F"/>
+        </g>
+      </svg>
+  </div>
+</body>
+</html>
