@@ -7,10 +7,10 @@
 | `index.html` | 首頁（繁體中文） |
 | `privacy/` | 隱私權政策，一頁四段：繁體中文、英文（`#english`）、簡體中文（`#zh-hans`）、日文（`#ja`）。App 裡「設定 > 隱私權政策」是同一份內容，**兩邊要一起改** |
 | `support/` | 支援與常見問題（App Store 的「支援網址」） |
-| `en/`、`zh-Hans/`、`ja/` | 英文、簡體中文、日文的首頁與 `support/`。結構、圖片和繁體頁一樣，只換文字；**改繁體頁時，這三種語言要跟著改** |
+| `en/`、`zh-Hans/`、`ja/` | 英文、簡體中文、日文的首頁與 `support/`。結構和繁體頁一樣，只換文字與截圖；**改繁體頁時，這三種語言要跟著改** |
 | `404.html` | 找不到頁面 |
-| `assets/` | 樣式 `site.css`、圖示、分享預覽圖 `og.png` |
-| `tools/og.html` | 分享預覽圖的原稿 |
+| `assets/` | 樣式 `site.css`、圖示、分享預覽圖 `og.png`（繁體）與 `og-en.png`、`og-zh-Hans.png`、`og-ja.png`；「實際畫面」的截圖在 `screens/`（繁體），各語言在 `screens/en/`、`screens/zh-Hans/`、`screens/ja/` |
+| `tools/og.html` | 分享預覽圖的原稿（各語言是 `tools/og-en.html` 等，示意圖和該語言首頁的首屏一樣） |
 
 App Store Connect 用的網址：
 
@@ -29,7 +29,7 @@ App Store Connect 用的網址：
 - 每頁 `<head>` 有四種語言加 `x-default`（指繁體）的 `hreflang`，`canonical` 指自己；`sitemap.xml` 列出所有語言的網址。
 - 頁首最後一項「語言」跳到頁尾的語言清單 `nav.langs#languages`，目前的語言標 `aria-current="page"`。
 - 簡體、日文頁在 `<head>` 的 `<style>` 換掉 `--serif`、`--hand`、`--sans`（Noto Serif SC／JP、Klee One 等），隱私權政策頁靠 `site.css` 的 `[lang]` 選擇器。
-- 「實際畫面」的截圖與分享預覽圖目前是繁體中文畫面，各語言共用。
+- 「實際畫面」的截圖、分享預覽圖（`og:image`）各語言用自己的：截圖是 App 以該語言啟動、開該語言的示範文件拍的（做法記在 App repo 的 `kb/wiki/design/website.md`「截圖」）。
 
 ## 本機預覽
 
@@ -46,6 +46,8 @@ python3 -m http.server 4321 --directory ..
 ```bash
 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --hide-scrollbars --window-size=1200,630 --virtual-time-budget=9000 --screenshot=assets/og.png http://localhost:4321/folium/tools/og.html
 ```
+
+各語言的 `assets/og-en.png`、`og-zh-Hans.png`、`og-ja.png` 一樣做法，網址換成 `tools/og-en.html` 等。
 
 ## 授權
 
