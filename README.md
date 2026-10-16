@@ -4,9 +4,10 @@
 
 | 路徑 | 內容 |
 |---|---|
-| `index.html` | 首頁 |
-| `privacy/` | 隱私權政策（中文＋英文）。App 裡「設定 > 隱私權政策」是同一份內容，**兩邊要一起改** |
+| `index.html` | 首頁（繁體中文） |
+| `privacy/` | 隱私權政策，一頁四段：繁體中文、英文（`#english`）、簡體中文（`#zh-hans`）、日文（`#ja`）。App 裡「設定 > 隱私權政策」是同一份內容，**兩邊要一起改** |
 | `support/` | 支援與常見問題（App Store 的「支援網址」） |
+| `en/`、`zh-Hans/`、`ja/` | 英文、簡體中文、日文的首頁與 `support/`。結構、圖片和繁體頁一樣，只換文字；**改繁體頁時，這三種語言要跟著改** |
 | `404.html` | 找不到頁面 |
 | `assets/` | 樣式 `site.css`、圖示、分享預覽圖 `og.png` |
 | `tools/og.html` | 分享預覽圖的原稿 |
@@ -22,6 +23,13 @@ App Store Connect 用的網址：
 「紙與墨」：暖白紙面、墨黑文字，靛藍是筆，朱紅是印章，顏色和 App 的 `Theme` 同一組（淺色、深色都有）。
 標題用思源宋體（Noto Serif TC），手寫的註記用霞鶩文楷（LXGW WenKai TC），英文字標用 Fraunces，都從 Google Fonts 載入。
 沒有 JavaScript；動畫只用 CSS，系統開了「減少動態效果」就直接顯示結果。
+
+### 多語言
+
+- 每頁 `<head>` 有四種語言加 `x-default`（指繁體）的 `hreflang`，`canonical` 指自己；`sitemap.xml` 列出所有語言的網址。
+- 頁首最後一項「語言」跳到頁尾的語言清單 `nav.langs#languages`，目前的語言標 `aria-current="page"`。
+- 簡體、日文頁在 `<head>` 的 `<style>` 換掉 `--serif`、`--hand`、`--sans`（Noto Serif SC／JP、Klee One 等），隱私權政策頁靠 `site.css` 的 `[lang]` 選擇器。
+- 「實際畫面」的截圖與分享預覽圖目前是繁體中文畫面，各語言共用。
 
 ## 本機預覽
 

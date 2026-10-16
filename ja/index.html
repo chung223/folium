@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Folium｜iPhone、iPad、Mac用のPDFと手書きのApp</title>
+  <meta name="description" content="Foliumは、iPhone、iPad、Mac用のPDFワークスペースです。手書きのメモ、署名、フォーム入力、テキストの直接編集、スキャン、WordやExcelへの変換まで、すべてお使いのデバイス上で完結します。">
+  <link rel="alternate" hreflang="zh-Hant" href="https://chung223.github.io/folium/">
+  <link rel="alternate" hreflang="en" href="https://chung223.github.io/folium/en/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://chung223.github.io/folium/zh-Hans/">
+  <link rel="alternate" hreflang="ja" href="https://chung223.github.io/folium/ja/">
+  <link rel="alternate" hreflang="x-default" href="https://chung223.github.io/folium/">
+  <link rel="canonical" href="https://chung223.github.io/folium/ja/">
+  <meta name="theme-color" content="#F7F4EE" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#171717" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Folium">
+  <meta property="og:title" content="Folium｜紙のように、PDFに書ける。">
+  <meta property="og:description" content="iPhone、iPad、Mac用のPDFワークスペース。手書き、署名、フォーム入力、テキスト編集、スキャン、変換まで、すべてデバイス上で。">
+  <meta property="og:url" content="https://chung223.github.io/folium/ja/">
+  <meta property="og:image" content="https://chung223.github.io/folium/assets/og.png">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:locale:alternate" content="zh_TW">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/favicon-64.png" sizes="64x64" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,500..700&family=Klee+One:wght@400;600&family=Noto+Serif+JP:wght@400;700;800&display=swap">
+  <link rel="stylesheet" href="../assets/site.css">
+  <style>
+    :root {
+      --serif: "Noto Serif JP", "Hiragino Mincho ProN", serif;
+      --hand: "Klee One", "Hiragino Maru Gothic ProN", serif;
+      --sans: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif;
+      --latin: "Fraunces", "Noto Serif JP", serif;
+    }
+    h1, h2, h3 { word-break: auto-phrase; }
+    .margin-line span { display: inline-block; }
+  </style>
+</head>
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="Foliumホーム">
+      <svg viewBox="0 0 1024 1024" aria-hidden="true"><path d="M512 92C360 176 246 324 256 496c7 116 42 196 88 262 40 56 104 82 168 82s128-26 168-82c46-66 81-146 88-262 10-172-104-320-256-404Z" fill="var(--sheet)" stroke="var(--ink)" stroke-width="52" stroke-linejoin="round"/><path d="M512 236v694M398 332l114 80M640 446l-128 98M406 600l106 74" fill="none" stroke="var(--indigo)" stroke-width="64" stroke-linecap="round"/></svg>
+      <span class="wordmark">Folium</span>
+    </a>
+    <nav class="nav" aria-label="メインメニュー">
+      <a href="#features">機能</a>
+      <a class="wide" href="#privacy">プライバシー</a>
+      <a class="wide" href="#plans">プラン</a>
+      <a href="support/">サポート</a>
+      <a href="#languages">言語</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="kicker rise" style="--at:.05s">iPhone・iPad・Mac</p>
+      <h1 class="rise" style="--at:.12s">紙のように、<br>PDFに<span class="stroke">書ける<svg viewBox="0 0 200 24" preserveAspectRatio="none" aria-hidden="true"><path class="draw" pathLength="1" style="--at:.9s;--d:.6s" d="M4 15C42 8 92 6 132 9c24 2 44 6 64 3"/></svg></span>。</h1>
+      <p class="margin-line rise" style="--at:1.3s"><span>プロのソフトみたいに、</span><span>どこでも直せる。</span></p>
+      <p class="lede rise" style="--at:.3s">Foliumは、PDFの作業に必要な道具をひとつにまとめました。手書きのメモ、署名、フォーム入力、テキストの直接編集、スキャン、そしてWordやExcelへの変換まで。すべてお使いのデバイス上で完結するので、書類があなたの手元を離れることはありません。</p>
+      <div class="cta rise" style="--at:.45s">
+        <a class="button" href="#beta">パブリックベータに参加<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <span class="soon"><b>App Store</b>で近日公開</span>
+      </div>
+    </div>
+
+    <figure class="hero-art rise" style="--at:.15s">
+      <svg viewBox="0 0 560 700" role="img" aria-labelledby="art-title">
+        <title id="art-title">契約書の1ページ。蛍光ペンを引いた一文、修正した金額、丸で囲んだ条項、チェックを入れた同意欄、手書きの署名、「承認済」のスタンプがある。</title>
+        <defs>
+          <filter id="stamp-ink" x="-5%" y="-5%" width="110%" height="110%">
+            <feTurbulence type="fractalNoise" baseFrequency="1.7" numOctaves="2" seed="11" result="noise"/>
+            <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -3 2.45" result="mask"/>
+            <feComposite in="SourceGraphic" in2="mask" operator="in"/>
+          </filter>
+        </defs>
+        <g transform="rotate(-1.6 280 350)">
+          <g class="doc-shadow"><rect class="doc-sheet" x="50" y="36" width="460" height="628" rx="3"/></g>
+
+          <text class="doc-title" x="284" y="104" text-anchor="middle">業務委託契約書</text>
+          <text class="doc-s" x="280" y="132" text-anchor="middle">委託者（甲）と受託者（乙）は、次のとおり合意する。</text>
+          <line class="doc-rule" x1="92" y1="150" x2="468" y2="150"/>
+
+          <text class="doc-h" x="92" y="184">第1条（業務の内容）</text>
+          <rect class="marker swipe" style="--at:.95s" x="189" y="218" width="206" height="17" rx="3"/>
+          <text class="doc-t" x="92" y="208">甲は、ブランドサイトの設計および制作を乙に委託する。</text>
+          <text class="doc-t" x="92" y="230">乙は、契約締結後三十日以内に初回デザイン案を納品する。</text>
+
+          <text class="doc-h" x="92" y="272">第2条（報酬および支払い）</text>
+          <text class="doc-t" x="92" y="296">本件の報酬総額は金</text>
+          <g class="appear" style="--at:1.4s">
+            <rect class="edit-box" x="207" y="282" width="63" height="19" rx="3"/>
+            <text class="doc-num" x="212" y="296" textLength="50" lengthAdjust="spacingAndGlyphs">520,000</text>
+          </g>
+          <line class="caret blink" style="--at:1.6s" x1="266" y1="285" x2="266" y2="298.5"/>
+          <text class="doc-t" x="274" y="296">円とし、</text>
+          <text class="doc-t" x="92" y="318">うち半額を契約締結時に、</text>
+          <text class="doc-t" x="92" y="340">残額を検収完了後七日以内に支払う。</text>
+          <path class="pen draw" pathLength="1" style="--at:1.75s;--d:.45s" d="M383 290c-34-17-74-19-106-6"/>
+          <path class="pen draw" pathLength="1" style="--at:2.15s;--d:.2s" d="M285 278l-9 6 10 4"/>
+          <text class="doc-note appear" style="--at:2.2s" x="388" y="296">金額を修正</text>
+
+          <text class="doc-h" x="92" y="382">第3条（秘密保持）</text>
+          <text class="doc-t" x="92" y="406">甲及び乙は、本業務で知り得た営業情報を、</text>
+          <text class="doc-t" x="92" y="428">相手方の承諾なく第三者に開示してはならない。</text>
+          <path class="pen draw" pathLength="1" style="--at:2.5s;--d:.6s" d="M322 393c-14-7-44-8-58-1-12 6-9 15 5 18 15 4 42 3 52-5 7-5 2-12-8-14"/>
+          <path class="pen draw" pathLength="1" style="--at:3.05s;--d:.4s" d="M384 392c-16-5-35-4-53 3"/>
+          <path class="pen draw" pathLength="1" style="--at:3.4s;--d:.2s" d="M341 388l-10 7 11 5"/>
+          <text class="doc-note appear" style="--at:3.45s" x="388" y="398">ここ要確認</text>
+
+          <rect x="92" y="458" width="13" height="13" rx="2" fill="none" stroke="#1C1B18" stroke-width="1.2"/>
+          <text class="doc-t" x="114" y="469.5">本契約を電子署名で締結することに同意する</text>
+          <path class="pen draw" pathLength="1" style="--at:3.85s;--d:.35s" d="M93 465c2 2 4 4 5.5 7 3-7 7-13 12.5-19"/>
+
+          <text class="doc-t" x="92" y="528">甲　署名</text>
+          <line x1="152" y1="533" x2="330" y2="533" stroke="#8A857B" stroke-width="1"/>
+          <path class="ink-pen draw" pathLength="1" style="--at:4.25s;--d:1.3s" d="M164 524c5-17 17-27 22-19 4 7-6 22-10 19-5-3 9-14 18-11 9 3 1 15 8 15 9 0 12-20 21-18 8 2-1 18 9 17 11-1 13-19 23-17 8 2-2 16 10 14 13-2 21-12 41-20"/>
+          <path class="ink-pen draw" pathLength="1" style="--at:5.5s;--d:.35s" d="M180 540c44-6 92-9 142-15"/>
+          <text class="doc-t" x="92" y="568">日付：2026年10月6日</text>
+
+          <g class="seal stamp" style="--at:5.95s" filter="url(#stamp-ink)">
+            <rect x="358" y="502" width="114" height="46" rx="3"/>
+            <text x="417.5" y="533" text-anchor="middle">承認済</text>
+          </g>
+
+          <text class="doc-s" x="280" y="640" text-anchor="middle">— 1 —</text>
+        </g>
+
+        <g class="dock appear" style="--at:.7s">
+          <rect class="capsule" x="150" y="652" width="260" height="44" rx="22"/>
+          <path class="tool active" d="M174 684l3-9 15-15 6 6-15 15-9 3Zm19-21 6 6"/>
+          <path class="tool" d="M211 683h14M213 679l9-17 7 4-9 17Z"/>
+          <path class="tool" d="M245 663h16M253 663v21"/>
+          <path class="tool" d="M276 666h16v12h-16ZM280 684h8"/>
+          <line x1="309" y1="664" x2="309" y2="684" stroke="#9B968C" stroke-width="1"/>
+          <circle cx="329" cy="674" r="7" fill="#1C1B18"/>
+          <circle cx="356" cy="674" r="7" fill="#4F5BD5"/>
+          <circle class="chip-on" cx="356" cy="674" r="11"/>
+          <circle cx="383" cy="674" r="7" fill="#D63A2F"/>
+        </g>
+      </svg>
+      <figcaption>イメージ：Foliumで契約書の金額を直し、線を引き、条項を囲み、チェックを入れて、署名とスタンプまで</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section" id="features">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">毎日のPDF作業</p>
+      <h2>契約書への署名から、<br>スキャンの山の整理まで。</h2>
+      <p>3つも4つものAppを行き来して、ファイルを移す必要はもうありません。PDFを開けば、書き込みも署名も修正も、すべてひとつの場所で済みます。</p>
+    </div>
+    <div class="chores">
+      <article class="card reveal">
+        <svg class="doodle" viewBox="0 0 46 46" aria-hidden="true"><path d="M6 30c4-12 10-16 11-8s-6 12-5 6 10-8 13-2c2 5 5-4 9-5 3-1 2 7 6 5"/><path d="M6 37h34"/></svg>
+        <span class="no">01</span>
+        <h3>署名</h3>
+        <p>指やApple Pencilで署名して保存しておけば、次からはタップひとつで配置できます。より正式な書類には、証明書による署名にタイムスタンプを付けることもできます。</p>
+      </article>
+      <article class="card reveal">
+        <svg class="doodle" viewBox="0 0 46 46" aria-hidden="true"><path d="M7 10h15v15H7z"/><path d="M9 17l5 5 10-13"/><path d="M28 14h12M28 20h8M7 34h33"/></svg>
+        <span class="no">02</span>
+        <h3>フォーム入力</h3>
+        <p>フィールドのあるフォームは、そのまま入力するだけ。スキャンした、フィールドのないフォームでも、Foliumが枠や下線、チェックボックスを見つけてくれるので、ひとつずつ埋めていけます。</p>
+      </article>
+      <article class="card reveal">
+        <svg class="doodle" viewBox="0 0 46 46" aria-hidden="true"><path d="M5 14h36v18H5z"/><path d="M31 17v12"/><path d="M11 28l4-10 4 10M12.5 25h5"/></svg>
+        <span class="no">03</span>
+        <h3>テキストを編集</h3>
+        <p>誤字を見つけたら、タップしてその場で直せます。元のWordファイルを探しに戻る必要はありません。画像の差し替えや挿入、文章の追加もできます。</p>
+      </article>
+      <article class="card reveal">
+        <svg class="doodle" viewBox="0 0 46 46" aria-hidden="true"><path class="fill" d="M6 16h30v10H6z"/><path d="M6 34c6-3 12 3 18 0s12-3 16 0"/><path d="M33 6l7 7-14 14-8 1 1-8z"/></svg>
+        <span class="no">04</span>
+        <h3>注釈</h3>
+        <p>ペン、蛍光ペン、テキストボックス、メモ、図形、スタンプで、思いどおりに書き込めます。描き終わりにペンを離さずに少し止めると、線や矢印、円、四角がきれいな形に整います。iOS 27以降では、手書きした内容も検索できます。</p>
+      </article>
+      <article class="card reveal">
+        <svg class="doodle" viewBox="0 0 46 46" aria-hidden="true"><path d="M6 14V7h7M33 7h7v7M40 32v7h-7M13 39H6v-7"/><path d="M13 18h20M13 23h20M13 28h13"/></svg>
+        <span class="no">05</span>
+        <h3>スキャン</h3>
+        <p>カメラで紙の書類をスキャンしてPDFにできます。テキスト認識をしておけば、スキャンした書類でも文字の検索、選択、コピーができます。</p>
+      </article>
+      <article class="card reveal">
+        <svg class="doodle" viewBox="0 0 46 46" aria-hidden="true"><path d="M13 8h17l7 7v23H13z"/><path d="M9 13v29h22"/><path d="M19 25h12M27 21l4 4-4 4"/></svg>
+        <span class="no">06</span>
+        <h3>整理</h3>
+        <p>ページの並べ替え、回転、削除、挿入、結合のほか、別の書類から数ページをコピーしてくることもできます。iPadやMacでは、PDFや画像をドラッグするだけで新しいページとして挿入できます。</p>
+      </article>
+    </div>
+    <p class="more reveal"><b>ほかにも</b>WordやExcelへの変換、OfficeからPDFへの変換、墨消し、パスワードと権限、ページ番号と透かし、ページのトリミング、2つの書類の比較、ファイルの圧縮、一括処理とショートカット。</p>
+  </div>
+</section>
+
+<section class="section screens" id="screens" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">実際の画面</p>
+      <h2>契約書の修正から署名まで、<br>iPhoneだけで済みます。</h2>
+      <p>以下はすべてFoliumの実際の画面です。</p>
+    </div>
+    <div class="phones">
+      <figure class="phone reveal">
+        <img src="../assets/screens/iphone-contract.webp" width="640" height="1391" loading="lazy" alt="iPhoneで開いた契約書。蛍光ペンで線を引き、条項を丸で囲み、チェックを入れ、「承認済」のスタンプを押している">
+        <figcaption><b>線を引く、丸で囲む</b>ペン、蛍光ペン、スタンプは「書き込み」ツールバーにまとまっています。</figcaption>
+      </figure>
+      <figure class="phone reveal">
+        <img src="../assets/screens/iphone-edit.webp" width="640" height="1391" loading="lazy" alt="iPhoneで契約書の1行を直接編集して、金額を52,000に変更しているところ">
+        <figcaption><b>テキストを直接編集</b>その行をタップすれば編集でき、終わったら「完了」をタップします。</figcaption>
+      </figure>
+      <figure class="phone reveal">
+        <img src="../assets/screens/iphone-sign.webp" width="640" height="1391" loading="lazy" alt="iPhoneで開いた契約書の2ページ目。双方の署名と日付、チェック済みの同意欄">
+        <figcaption><b>署名と日付</b>署名して同意欄にチェックを入れたら、すぐに送り返せます。</figcaption>
+      </figure>
+    </div>
+    <div class="bigs">
+      <figure class="tablet reveal">
+        <img src="../assets/screens/ipad-handout.webp" width="1100" height="1467" loading="lazy" alt="iPadで開いた読書会の資料。文章を丸で囲み、星印や下線、蛍光ペンで書き込んである">
+        <figcaption><b>iPad</b>Apple Pencilで資料にどんどん書き込めます。</figcaption>
+      </figure>
+      <figure class="mac reveal">
+        <img src="../assets/screens/mac-report.webp" width="1600" height="1000" loading="lazy" alt="MacのFoliumのウインドウで、注釈を付けた業務報告書を開いているところ">
+        <figcaption><b>Mac</b>メニュー、キーボードショートカット、複数のウインドウで、大量の作業もすばやく片付きます。</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section library" id="library" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">ライブラリ</p>
+      <h2>書類がどんなに増えても、<br>目当ての1件がすぐ見つかる。</h2>
+      <p>フォルダで分類して、「署名待ち」「完了」などのタグを付けられます。検索では、PDFの中の文字まで一緒に探します。フォルダはiCloud Driveにある本物のフォルダなので、「ファイル」AppやFinderでも同じように整理されて見えます。</p>
+    </div>
+    <div class="library-grid">
+      <figure class="library-art reveal">
+        <svg viewBox="0 0 720 470" role="img" aria-labelledby="lib-title">
+          <title id="lib-title">MacのFoliumのライブラリ。左側にフォルダとタグ。右側では「仕事」フォルダ内で「年次大会」を検索していて、タイトルが一致したフォルダと書類、その下に本文で年次大会に触れているページが並んでいる。</title>
+          <defs>
+            <clipPath id="lib-clip"><rect x="8" y="8" width="704" height="454" rx="12"/></clipPath>
+            <path id="lib-folder" d="M0 2.5v8A1.5 1.5 0 0 0 1.5 12h11a1.5 1.5 0 0 0 1.5-1.5v-6A1.5 1.5 0 0 0 12.5 3H7L5.5 1h-4A1.5 1.5 0 0 0 0 2.5Z"/>
+            <path id="lib-file" d="M1.5 0H8l3.5 3.5v9A1.5 1.5 0 0 1 10 14H1.5A1.5 1.5 0 0 1 0 12.5v-11A1.5 1.5 0 0 1 1.5 0ZM7.5 0v4h4M3 7.5h5.5M3 10h4"/>
+          </defs>
+          <g class="doc-shadow"><rect class="lib-window" x="8" y="8" width="704" height="454" rx="12"/></g>
+          <g clip-path="url(#lib-clip)">
+            <rect class="lib-side" x="8" y="8" width="184" height="454"/>
+            <line class="lib-line" x1="192" y1="8" x2="192" y2="462"/>
+            <line class="lib-line" x1="192" y1="58" x2="712" y2="58"/>
+          </g>
+          <circle class="lib-light" cx="30" cy="30" r="5.5"/><circle class="lib-light" cx="48" cy="30" r="5.5"/><circle class="lib-light" cx="66" cy="30" r="5.5"/>
+
+          <!-- サイドバー -->
+          <circle class="lib-icon" cx="31" cy="67.5" r="6"/><path class="lib-icon" d="M31 64.5v3.5l2.5 1.5"/>
+          <text class="lib-t" x="46" y="72">最近使った項目</text>
+          <path class="lib-icon" d="M27 92h8.5v11H27zM29.5 92v-2.5H38v11h-2.5"/>
+          <text class="lib-t" x="46" y="98">すべての書類</text>
+          <path class="lib-icon" d="M25 119.5h3.8l1.4 2.4h3.6l1.4-2.4H39v5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 25 124.5zM25 119.5l2.2-5.5h9.6l2.2 5.5"/>
+          <text class="lib-t" x="46" y="124">未分類</text>
+
+          <text class="lib-h" x="24" y="158">フォルダ</text>
+          <rect class="lib-sel" x="16" y="168" width="168" height="24" rx="6"/>
+          <use class="lib-icon" href="#lib-folder" x="24" y="174"/><text class="lib-t" x="46" y="185">仕事</text>
+          <use class="lib-icon" href="#lib-folder" x="38" y="198"/><text class="lib-t" x="60" y="209">2026年次大会</text>
+          <use class="lib-icon" href="#lib-folder" x="24" y="222"/><text class="lib-t" x="46" y="233">契約書</text>
+          <use class="lib-icon" href="#lib-folder" x="24" y="246"/><text class="lib-t" x="46" y="257">読書会</text>
+
+          <text class="lib-h" x="24" y="292">タグ</text>
+          <circle class="lib-red" cx="31" cy="309.5" r="4.5"/><text class="lib-t" x="46" y="314">署名待ち</text><text class="lib-n" x="176" y="314" text-anchor="end">3</text>
+          <circle class="lib-green" cx="31" cy="333.5" r="4.5"/><text class="lib-t" x="46" y="338">完了</text><text class="lib-n" x="176" y="338" text-anchor="end">12</text>
+          <circle class="lib-orange" cx="31" cy="357.5" r="4.5"/><text class="lib-t" x="46" y="362">経費精算</text><text class="lib-n" x="176" y="362" text-anchor="end">4</text>
+
+          <!-- ツールバー -->
+          <text class="lib-title" x="212" y="39">仕事</text>
+          <rect class="lib-field" x="436" y="22" width="60" height="24" rx="12"/>
+          <rect class="lib-seg" x="467" y="24" width="27" height="20" rx="10"/>
+          <path class="lib-icon" d="M446 29h4v4h-4zM453 29h4v4h-4zM446 36h4v4h-4zM453 36h4v4h-4z"/>
+          <path class="lib-icon on" d="M474 30h13M474 34h13M474 38h13"/>
+          <rect class="lib-field" x="508" y="22" width="188" height="24" rx="12"/>
+          <circle class="lib-icon" cx="523" cy="33.5" r="4.5"/><path class="lib-icon" d="M526.4 36.9l3.2 3.2"/>
+          <text class="lib-t" x="537" y="38.5">年次大会</text>
+          <line class="caret blink" x1="590" y1="27.5" x2="590" y2="40"/>
+          <circle class="lib-clear" cx="684" cy="34" r="6"/><path class="lib-x" d="M681.8 31.8l4.4 4.4M686.2 31.8l-4.4 4.4"/>
+
+          <!-- タイトルが一致：リスト -->
+          <text class="lib-col" x="236" y="80">名前</text><text class="lib-col" x="452" y="80">変更日</text><text class="lib-col" x="562" y="80">ページ数</text><text class="lib-col" x="628" y="80">サイズ</text>
+          <line class="lib-line" x1="208" y1="89" x2="696" y2="89"/>
+          <use class="lib-icon" href="#lib-folder" x="213" y="100"/><text class="lib-t" x="236" y="111">2026年次大会</text>
+          <text class="lib-s" x="452" y="111">—</text><text class="lib-s" x="562" y="111">6件</text><text class="lib-s" x="628" y="111">—</text>
+          <line class="lib-line" x1="236" y1="121" x2="696" y2="121"/>
+          <use class="lib-icon" href="#lib-file" x="214" y="131"/><text class="lib-t" x="236" y="143">年次大会申込書</text>
+          <circle class="lib-red" cx="336" cy="138.5" r="3.8"/><text class="lib-s" x="343" y="142.5">署名待ち</text>
+          <text class="lib-s" x="452" y="143">10月14日</text><text class="lib-s" x="562" y="143">2</text><text class="lib-s" x="628" y="143">180 KB</text>
+          <line class="lib-line" x1="236" y1="153" x2="696" y2="153"/>
+
+          <!-- 本文に一致 -->
+          <text class="lib-sec" x="212" y="184">本文に一致</text>
+          <rect class="lib-card" x="208" y="196" width="488" height="100" rx="10"/>
+          <rect class="lib-thumb" x="222" y="208" width="56" height="76" rx="2"/>
+          <path class="lib-thumb-line" d="M230 219h40M230 227h31M230 235h40M230 243h24M230 255h40M230 263h35M230 271h20"/>
+          <text class="lib-doc" x="294" y="227">参加者ガイド</text>
+          <text class="lib-page" x="294" y="253">3ページ</text>
+          <text class="lib-t" x="344" y="253">…1週間前に<tspan class="lib-hit">年次大会</tspan>の日程と宿泊案内をお送りします…</text>
+          <text class="lib-page" x="294" y="277">7ページ</text>
+          <text class="lib-t" x="344" y="277">…<tspan class="lib-hit">年次大会</tspan>当日は午前8時30分から受付開始…</text>
+
+          <rect class="lib-card" x="208" y="308" width="488" height="76" rx="10"/>
+          <rect class="lib-thumb" x="222" y="318" width="42" height="56" rx="2"/>
+          <path class="lib-thumb-line" d="M229 328h28M229 335h22M229 342h28M229 352h28M229 359h18"/>
+          <text class="lib-doc" x="280" y="338">ケータリング見積書</text>
+          <text class="lib-page" x="280" y="364">1ページ</text>
+          <text class="lib-t" x="330" y="364">…<tspan class="lib-hit">年次大会</tspan>の昼食弁当120個（ベジタリアン用を含む）…</text>
+
+          <path class="pen" d="M368 420c-18-4-30-18-28-38"/>
+          <path class="pen" d="M333.5 389.5l6.5-8.5 6 8.8"/>
+          <text class="doc-note" x="378" y="424">PDFの中の文字も見つかる</text>
+          <text class="doc-note" x="378" y="446">クリックでそのページが開く</text>
+        </svg>
+        <figcaption>イメージ：Macで「年次大会」を検索すると、タイトルも書類の中の文字もまとめて見つかる</figcaption>
+      </figure>
+      <div class="points">
+        <div class="point reveal">
+          <h3><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M4 8.5v12A2.5 2.5 0 0 0 6.5 23h15a2.5 2.5 0 0 0 2.5-2.5v-9A2.5 2.5 0 0 0 21.5 9H13l-2.5-3h-4A2.5 2.5 0 0 0 4 8.5z"/></svg>フォルダ</h3>
+          <p>フォルダの中にフォルダを作れます。ドラッグするか、メニューの「移動…」を選べば、複数の書類をまとめて移動できます。フォルダを削除しても、中の書類はひとつ上の階層に移るだけで、一緒に消えることはありません。</p>
+        </div>
+        <div class="point reveal">
+          <h3><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M4 5h9.5L24 15.5 15.5 24 5 13.5z"/><circle cx="9.5" cy="10" r="1.6"/></svg>タグ</h3>
+          <p>1つの書類に複数のタグを付けられ、色は7色から選べます。タグをタップすると、どのフォルダにあっても、そのタグが付いた書類がすべて表示されます。</p>
+        </div>
+        <div class="point reveal">
+          <h3><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="12" cy="12" r="7.5"/><path d="M17.5 17.5L24 24M8.5 10h7M8.5 14h5"/></svg>書類の中の文字を検索</h3>
+          <p>PDFの中の文字、テキスト認識をしたスキャン、自分で追加したテキストボックスやフォームへの入力内容まで、まとめて検索します。結果をタップすると、そのページで書類が開きます。</p>
+        </div>
+        <div class="point reveal">
+          <h3><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M4 7h3M11 7h13M4 14h3M11 14h13M4 21h3M11 21h13"/></svg>Macではリスト表示も</h3>
+          <p>Macではリスト表示に切り替えて、名前、変更日、ページ数、サイズで並べ替えられます。⌘Fを押せばすぐに検索できます。読み込んだばかりでまだ整理していない書類は、「未分類」にまとまっています。</p>
+        </div>
+      </div>
+    </div>
+    <p class="note-line reveal">フォルダ、タグ、検索は、すべて無料です。</p>
+  </div>
+</section>
+
+<section class="section" id="devices" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">3つのプラットフォーム</p>
+      <h2>ポケットでも、デスクでも、ペン先でも、<br>いつも同じ書類。</h2>
+    </div>
+    <div class="devices">
+      <div class="device reveal">
+        <div class="art"><svg viewBox="0 0 90 150" aria-hidden="true"><rect x="4" y="2" width="82" height="146" rx="16"/><rect class="screen" x="9" y="8" width="72" height="134" rx="11"/><path d="M38 16h14" stroke-width="5"/><path d="M20 42h50M20 52h44M20 62h50M20 72h30"/><path class="pen-line" d="M20 112c6-12 12-14 13-6s7 12 13 0 10-6 16 0"/><path class="accent" d="M18 124h54"/></svg></div>
+        <h3>iPhone <small>外出先で</small></h3>
+        <p>iPhoneでよくする作業ほど快適に。署名、フォーム入力、ちょっとした書き込み、1文字の修正をして、すぐに送り返せます。</p>
+      </div>
+      <div class="device reveal">
+        <div class="art"><svg viewBox="0 0 200 150" aria-hidden="true"><rect x="4" y="6" width="192" height="140" rx="12"/><rect class="screen" x="12" y="14" width="176" height="124" rx="5"/><path d="M24 30h64M24 40h58M24 50h64M24 60h40M112 30h64M112 40h58M112 50h64M112 60h52M112 70h30"/><path class="pen-line" d="M24 84c10-8 20 6 30-2s18 4 26-2"/><path class="pen-line" d="M110 94c18-10 34 6 52-4"/><path d="M168 132l26-46 5 3-26 46-6 3z"/></svg></div>
+        <h3>iPad <small>ペンで書く</small></h3>
+        <p>Apple Pencilでノートを取ったり、添削したり、線を引いたり。2つの書類を並べて、片方を見ながらもう片方に書き込めます。</p>
+      </div>
+      <div class="device reveal">
+        <div class="art"><svg viewBox="0 0 230 150" aria-hidden="true"><rect x="22" y="6" width="186" height="118" rx="8"/><rect class="screen" x="30" y="14" width="170" height="102" rx="3"/><path d="M4 130h222l-8 12H12z"/><circle cx="40" cy="23" r="2.4"/><circle cx="48" cy="23" r="2.4"/><circle cx="56" cy="23" r="2.4"/><path d="M40 36h22M40 44h18M40 52h22M40 60h16M76 36h108M76 46h100M76 56h108M76 66h86M76 76h108M76 86h60"/><path class="pen-line" d="M76 100c14-6 26 4 40-2"/></svg></div>
+        <h3>Mac <small>大量の作業</small></h3>
+        <p>Macのために設計したメニュー、キーボードショートカット、複数のウインドウ。FinderからPDFを開いてそのまま編集すれば、自動で元のファイルに保存されます。大量の変換や結合もすばやくこなせます。</p>
+      </div>
+    </div>
+    <p class="note-line reveal">書類はあなた自身のiCloudで同期されます。Folium Proは一度購入すれば、3つのプラットフォームすべてで使えます。</p>
+  </div>
+</section>
+
+<section class="section band" id="privacy">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">プライバシー</p>
+      <h2>あなたの書類は、あなたの手元だけに。</h2>
+      <p>Foliumは、あなたの個人データを収集、アップロード、共有しません。どの機能を使ったかも記録しません。</p>
+    </div>
+    <div class="points">
+      <div class="point reveal">
+        <h3><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="10" r="4.5"/><path d="M5 24c1.5-5 5-7.5 9-7.5s7.5 2.5 9 7.5"/><path d="M4 4l20 20"/></svg>アカウント登録は不要</h3>
+        <p>開いたらすぐに使えます。広告も、分析ツールも、トラッキングも一切ありません。</p>
+      </div>
+      <div class="point reveal">
+        <h3><svg viewBox="0 0 28 28" aria-hidden="true"><rect x="8" y="3" width="12" height="22" rx="3"/><path d="M11 9h6v6h-6zM12.5 21h3"/></svg>デバイス上で処理</h3>
+        <p>テキスト認識、手書き認識、ファイルの変換、テキストの編集は、すべてお使いのiPhone、iPad、Mac上で行われます。</p>
+      </div>
+      <div class="point reveal">
+        <h3><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M8 21h12.5a4.5 4.5 0 0 0 .4-9A6.5 6.5 0 0 0 8.6 13.4 3.9 3.9 0 0 0 8 21z"/></svg>保存先はあなたの場所</h3>
+        <p>書類はデバイス上か、あなた自身のiCloud Driveに保存されます。開発者があなたの書類を見ることはできません。</p>
+      </div>
+      <div class="point reveal">
+        <h3><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M10 5L8 23M18 5l-2 18M5 11h18M4 17h18"/></svg>通信するのは署名のときだけ</h3>
+        <p>インターネットに接続するのは、デジタル署名のタイムスタンプと証明書の確認のときだけです。送信されるのはハッシュ値と証明書の情報で、書類の内容ではありません。</p>
+      </div>
+    </div>
+    <p class="readmore reveal"><a href="../privacy/#ja">プライバシーポリシーをすべて読む →</a></p>
+  </div>
+</section>
+
+<section class="section safety" id="safety">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">安心して編集</p>
+      <h2>間違えても、元に戻せる。</h2>
+      <p>お金を払って使う方にとっていちばん大切なのは、書類が壊れないこと、なくならないこと。Foliumは、保存の仕組みからそのために設計しています。</p>
+    </div>
+    <div class="points">
+      <div class="point reveal">
+        <h3><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M8 4h9l5 5v15H8z"/><path d="M5 8v18h14"/><path d="M11 16l3 3 5-6"/></svg>元のファイルはずっと残ります</h3>
+        <p>読み込んだ元のPDFは、手を加えずにそのまま書類の中に保管されます。変更はすべて取り消せて、以前に保存したバージョンにも戻せます。</p>
+      </div>
+      <div class="point reveal">
+        <h3><svg viewBox="0 0 28 28" aria-hidden="true"><rect x="3" y="5" width="9" height="18" rx="1.5"/><rect x="16" y="5" width="9" height="18" rx="1.5"/><path d="M12.5 12h3M12.5 16h3"/></svg>保存する前に照合</h3>
+        <p>変更を元のファイルに保存するときは、Foliumが1ページずつ表示を照合し、画面で見ているとおりになっていることを確かめてから書き込みます。</p>
+      </div>
+      <div class="point reveal">
+        <h3><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="11" r="7"/><path d="M10.5 11l2.5 2.5 4.5-5"/><path d="M9.5 17L8 25l6-3 6 3-1.5-8"/></svg>署名済みの内容はそのまま</h3>
+        <p>デジタル署名済みのPDFでは、変更は必ずファイルの末尾に追加されます。署名したときの内容は1バイトも変わりません。</p>
+      </div>
+      <div class="point reveal">
+        <h3><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M6 4c0 8 8 9 8 15M22 4c0 8-8 9-8 15M14 19v6"/></svg>2台で編集してもぶつからない</h3>
+        <p>同じ書類を2台のデバイスで編集しても、iCloudで同期するときに両方の変更をまとめます。どちらか一方で上書きしてしまうことはありません。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="plans" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">プラン</p>
+      <h2>毎日使う機能は無料。<br>プロ向けの機能はProで。</h2>
+    </div>
+    <div class="plans">
+      <div class="plan reveal">
+        <h3>無料</h3>
+        <p class="sub">書類の数は無制限、透かしも入りません。</p>
+        <ul>
+          <li>閲覧、検索、しおり</li>
+          <li>フォルダとタグ、すべての書類の中の文字を検索</li>
+          <li>手書き、蛍光ペン、テキストボックス、メモ、図形、スタンプ。描いて止めるときれいに整う図形</li>
+          <li>手書きの署名</li>
+          <li>フォーム入力（フィールドのないスキャンしたフォームにも対応）</li>
+          <li>ページの整理、結合、コピー</li>
+          <li>カメラでスキャンしてPDFに</li>
+          <li>iCloud同期、バージョン履歴</li>
+          <li>書き出し、元のファイルに保存、共有、プリント</li>
+        </ul>
+      </div>
+      <div class="plan pro reveal">
+        <span class="seal-badge" aria-hidden="true">PRO</span>
+        <h3><span class="latin">Folium</span> Pro</h3>
+        <p class="sub">月額、年額（最初の1週間は無料）、または買い切り。</p>
+        <ul>
+          <li>テキストの直接編集、画像の差し替えと挿入</li>
+          <li>証明書による署名、タイムスタンプと長期検証（LTV）</li>
+          <li>フォームフィールドの作成</li>
+          <li>ページ番号、透かし、トリミング、サイズ変更、分割</li>
+          <li>テキスト認識（OCR）</li>
+          <li>WordとExcelへの変換、OfficeからPDFへの変換</li>
+          <li>墨消し、非表示情報の削除、パスワードと権限</li>
+          <li>書類の比較、圧縮、ワークスペースとショートカットによる一括処理</li>
+        </ul>
+      </div>
+    </div>
+    <div class="fineprint reveal">
+      <p>どのプランでも、1回の購入でiPhone、iPad、Macのすべてで使えて、「ファミリー共有」で家族とも共有できます。</p>
+      <p>サブスクリプションが終了したり返金を受けたりしても、Proで行った変更はそのまま表示でき、元のファイルへの保存や書き出しもできます。書類が閉じ込められることはありません。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section beta" id="beta" style="padding-top:0">
+  <div class="wrap">
+    <div class="slip reveal">
+      <p class="eyebrow" style="justify-content:center">TestFlightパブリックベータ</p>
+      <h2>Foliumを試してみませんか。</h2>
+      <p>まずiPhone、iPad、MacにAppleのTestFlight Appをインストールしてから、下のリンクから参加してください。定員は100人です。ベータ版での購入はすべてテスト用で、実際に請求されることはありません。</p>
+      <p style="margin-top:24px"><a class="button" href="https://testflight.apple.com/join/ukPhaMgK">TestFlightでベータに参加<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+      <p class="hand">リンクを開いてまだ参加できないと表示されたら、Appleの審査中です。1〜2日後にもう一度お試しください。</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="./" aria-label="Foliumホーム">
+        <svg viewBox="0 0 1024 1024" aria-hidden="true"><path d="M512 92C360 176 246 324 256 496c7 116 42 196 88 262 40 56 104 82 168 82s128-26 168-82c46-66 81-146 88-262 10-172-104-320-256-404Z" fill="var(--sheet)" stroke="var(--ink)" stroke-width="52" stroke-linejoin="round"/><path d="M512 236v694M398 332l114 80M640 446l-128 98M406 600l106 74" fill="none" stroke="var(--indigo)" stroke-width="64" stroke-linecap="round"/></svg>
+        <span class="wordmark">Folium</span><span class="tag">PDFと手書き</span>
+      </a>
+      <nav aria-label="フッターのリンク">
+        <a href="../privacy/#ja">プライバシーポリシー</a>
+        <a href="support/">サポート</a>
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">利用規約</a>
+        <a href="https://github.com/chung223/folium">GitHub</a>
+      </nav>
+      <nav class="langs" id="languages" aria-label="言語">
+        <a href="../" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+        <a href="../en/" hreflang="en" lang="en">English</a>
+        <a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+        <a href="./" hreflang="ja" lang="ja" aria-current="page">日本語</a>
+      </nav>
+    </div>
+    <p class="legal">© 2026 Folium。Apple、iPhone、iPad、Mac、iCloud、Apple Pencil、TestFlightは、米国およびその他の国や地域で登録されたApple Inc.の商標です。Microsoft Word、Excelは、Microsoft Corporationの商標です。</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -100,12 +100,17 @@ img, svg { display: block; max-width: 100%; }
 }
 .masthead .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 60px; }
 .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; }
-.brand svg { width: 30px; height: 30px; }
+.brand svg { width: 30px; height: 30px; flex: none; }
 .wordmark { font: italic 600 25px/1 var(--latin); letter-spacing: .01em; font-variation-settings: "opsz" 72, "SOFT" 60; }
 .nav { display: flex; gap: clamp(12px, 2.6vw, 28px); font: 500 14.5px/1 var(--sans); letter-spacing: .06em; }
 .nav a { color: var(--ink-2); text-decoration: none; padding: 8px 0; }
 .nav a:hover, .nav a[aria-current="page"] { color: var(--ink); }
-@media (max-width: 520px) { .nav .wide { display: none; } }
+@media (max-width: 520px) {
+  .nav .wide { display: none; }
+  /* 英文的導覽字比較長（Features、Language），窄螢幕收一點字距，免得把字標擠扁 */
+  .nav:lang(en) { gap: 10px; letter-spacing: .02em; }
+}
+@media (max-width: 400px) { .nav:lang(en) a:first-child { display: none; } }
 
 /* ── 共用 ─────────────────────────────── */
 .eyebrow {
@@ -297,6 +302,44 @@ h3 { font-size: 1.2rem; line-height: 1.5; font-weight: 700; letter-spacing: .03e
 .safety .point h3 svg { color: var(--indigo); }
 .safety .point p { color: var(--ink-2); }
 
+/* ── 圖書館 ───────────────────────────── */
+.library-grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 72px); align-items: center; }
+@media (max-width: 880px) { .library-grid { grid-template-columns: 1fr; } }
+.library-art { margin: 0; }
+.library-art svg { width: 100%; height: auto; overflow: visible; }
+.library-art figcaption { margin-top: 10px; text-align: center; font: 500 12.5px/1.6 var(--sans); color: var(--ink-3); letter-spacing: .08em; }
+.library .points { grid-template-columns: 1fr; gap: clamp(22px, 3vw, 32px); }
+.library .point h3 svg { color: var(--indigo); }
+.library .point p { color: var(--ink-2); }
+/* 示意圖：Mac 的圖書館視窗（和首屏的文件一樣，深色模式也是淺色的視窗） */
+.lib-window { fill: #FFFFFF; }
+.lib-side { fill: #F4F1EB; }
+.lib-line { stroke: #E6E1D7; stroke-width: 1; }
+.lib-light { fill: #DCD6CB; }
+.lib-sel { fill: #E6E1D7; }
+.lib-field { fill: #F1EEE8; }
+.lib-seg { fill: #FFFFFF; stroke: #E0DACF; }
+.lib-clear { fill: #C9C3B8; }
+.lib-x { stroke: #FFFFFF; stroke-width: 1.4; stroke-linecap: round; }
+.lib-card { fill: #FBFAF7; stroke: #E6E1D7; }
+.lib-thumb { fill: #FFFFFF; stroke: #D9D3C8; }
+.lib-thumb-line { stroke: #DCD6CB; stroke-width: 2; stroke-linecap: round; }
+.lib-icon { fill: none; stroke: #6B675F; stroke-width: 1.3; stroke-linecap: round; stroke-linejoin: round; }
+.lib-icon.on { stroke: #1C1B18; }
+.lib-t { font: 400 12.5px var(--sans); fill: #1C1B18; }
+.lib-s, .lib-n { font: 400 11.5px var(--sans); fill: #6B675F; }
+.lib-n { fill: #9B968C; }
+.lib-h { font: 600 10.5px var(--sans); fill: #9B968C; letter-spacing: .08em; }
+.lib-col { font: 600 11px var(--sans); fill: #4F5BD5; }
+.lib-sec { font: 600 12px var(--sans); fill: #6B675F; }
+.lib-title { font: 700 15px var(--serif); fill: #1C1B18; }
+.lib-doc { font: 700 13.5px var(--serif); fill: #1C1B18; }
+.lib-page { font: 600 11.5px var(--sans); fill: #6B675F; }
+.lib-hit { fill: #4F5BD5; font-weight: 600; }
+.lib-red { fill: #D63A2F; }
+.lib-green { fill: #2B8A5A; }
+.lib-orange { fill: #C8562A; }
+
 /* ── 方案 ─────────────────────────────── */
 .plans { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(18px, 3vw, 32px); }
 @media (max-width: 760px) { .plans { grid-template-columns: 1fr; } }
@@ -410,3 +453,15 @@ h3 { font-size: 1.2rem; line-height: 1.5; font-weight: 700; letter-spacing: .03e
   .phone { scroll-snap-align: start; }
   .bigs { grid-template-columns: 1fr; }
 }
+
+/* 語言清單（頁尾，每一頁都有；頁首的「語言」連到這裡）。四種語言：繁體中文、English、简体中文、日本語 */
+.footer .langs { display: flex; flex-wrap: wrap; gap: 6px 18px; width: 100%; margin-top: 4px; font: 500 14px/1.6 var(--sans); }
+.footer .langs a { color: var(--ink-2); text-decoration: none; }
+.footer .langs a:hover { color: var(--ink); text-decoration: underline; }
+.footer .langs a[aria-current="page"] { color: var(--ink); font-weight: 700; }
+/* 隱私權政策：簡體、日文段落用各自的字型 */
+.doc-page .lang-section { margin-top: 72px; }
+/* 頁首是 sticky 的，跳到各語言段落時留出它的高度 */
+.doc-page .english, .doc-page .lang-section { scroll-margin-top: 84px; }
+.doc-page [lang="zh-Hans"] { --serif: "Noto Serif SC", "Songti SC", serif; --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif; }
+.doc-page [lang="ja"] { --serif: "Noto Serif JP", "Hiragino Mincho ProN", serif; --sans: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif; }
