@@ -61,7 +61,7 @@
     <ul>
       <li><strong>時間戳</strong>：把簽章值的雜湊值（一串無法還原成文件內容的數字）送到你選擇的時間戳服務（DigiCert、Sectigo 或 GlobalSign），取得可信的時間。文件內容不會送出。</li>
       <li><strong>長期驗證</strong>：向憑證上記載的憑證機構查詢憑證狀態（OCSP、CRL），送出的是憑證序號等公開資訊。</li>
-      <li><strong>AI 功能</strong>：只有在你選了雲端或本機服務商並同意之後，才會把你選的內容傳給那家服務商。細節見「AI 功能」。</li>
+      <li><strong>AI 功能</strong>：你新增服務商並按「連線測試」時，本 App 會把你的 key 傳給那家服務商，確認 key 能用並列出模型，不含文件內容。文件內容要等你在同意畫面按下同意，才會傳出。細節見「AI 功能」。</li>
     </ul>
     <p>這些服務會收到你的 IP 位址等一般連線資訊，由各服務依它們的隱私權政策處理。</p>
 
@@ -69,8 +69,8 @@
     <p>AI 是選用功能，你可以隨時關閉。</p>
     <ul>
       <li><strong>Apple 裝置上的模型</strong>：在你的裝置上處理，內容不會離開裝置。</li>
-      <li><strong>雲端或本機服務商</strong>（例如 OpenAI、Anthropic、Google Gemini、OpenRouter、DeepSeek、MiniMax，或你自己電腦上的 Ollama）：只會收到你選擇送出的內容，也就是你的問題、你選取的文字，或相關頁面的文字。不會送出圖片、手寫筆跡或整份 PDF 檔。內容直接從你的裝置傳給服務商，不經過 Folium。服務商也會收到你的 API key，用來確認你的身分。這些內容由該服務商依它自己的隱私權政策處理。</li>
-      <li><strong>API key</strong>：存在你裝置的鑰匙圈，不會傳給開發者。如果你開啟「同步 key 到我的其他裝置」，會透過 iCloud 鑰匙圈同步到你自己的其他裝置。</li>
+      <li><strong>雲端或本機服務商</strong>（例如 OpenAI、Anthropic、Google Gemini、OpenRouter、DeepSeek、MiniMax，或你自己電腦上的 Ollama）：只會收到你選擇送出的內容，也就是你的問題、你選取的文字，或相關頁面的文字。不會送出圖片、手寫筆跡或整份 PDF 檔。內容直接從你的裝置傳給服務商，不經過 Folium。服務商也會收到你的 API key，用來確認你的身分。這些內容由該服務商依它自己的隱私權政策處理。如果你填的是本機或自訂位址（例如另一台電腦上的 Ollama），內容會經你的網路傳到那個位址。本 App 不要求這條連線加密，請只填你信任的位址。</li>
+      <li><strong>API key</strong>：存在你裝置的鑰匙圈，不會傳給開發者。預設會透過 iCloud 鑰匙圈，把 key 和服務商清單（含網址與選的模型）同步到登入同一個 Apple 帳號的其他裝置。你可以在「設定 &gt; AI」關閉「同步 key 到我的其他裝置」。</li>
       <li><strong>同意</strong>：每一台裝置第一次要傳給某家服務商之前，本 App 會先請你同意。</li>
       <li><strong>關閉 AI</strong>：到「設定 &gt; AI」關閉「使用 AI」。</li>
       <li><strong>撤回同意</strong>：到「設定 &gt; AI」刪除那家服務商，它的 key 和同意紀錄會一併刪除，下次使用要重新同意。</li>
@@ -122,7 +122,7 @@
       <ul>
         <li><strong>Timestamps</strong>: the app sends a hash of the signature value (a number that cannot be turned back into your document) to the timestamp service you choose (DigiCert, Sectigo, or GlobalSign) to get a trusted time. Your document content is not sent.</li>
         <li><strong>Long-term validation</strong>: the app asks the certificate authorities named in the certificates for their status (OCSP, CRL). It sends public information such as certificate serial numbers.</li>
-        <li><strong>AI features</strong>: only after you choose a cloud or local provider and agree, the app sends the content you choose to that provider. See “AI features”.</li>
+        <li><strong>AI features</strong>: when you add a provider and tap the connection test, the app sends your API key to that provider to check it and list models. No document content is sent. Document content is sent only after you agree on the consent screen. See “AI features”.</li>
       </ul>
       <p>These services receive ordinary connection information such as your IP address, and handle it under their own privacy policies.</p>
 
@@ -130,8 +130,8 @@
       <p>AI is optional, and you can turn it off at any time.</p>
       <ul>
         <li><strong>Apple on-device model</strong>: runs on your device. Your content does not leave it.</li>
-        <li><strong>Cloud or local providers</strong> (for example OpenAI, Anthropic, Google Gemini, OpenRouter, DeepSeek, MiniMax, or Ollama on your own computer): the provider receives only what you choose to send, which is your question, the text you select, or the text of relevant pages. Images, handwriting strokes, and whole PDF files are not sent. The content goes directly from your device to the provider, not through Folium. The provider also receives your API key to verify who you are. The provider handles all of this under its own privacy policy.</li>
-        <li><strong>API keys</strong>: stored in your device’s Keychain and never sent to the developer. If you turn on “Sync Keys to My Other Devices”, they sync to your other devices through iCloud Keychain.</li>
+        <li><strong>Cloud or local providers</strong> (for example OpenAI, Anthropic, Google Gemini, OpenRouter, DeepSeek, MiniMax, or Ollama on your own computer): the provider receives only what you choose to send, which is your question, the text you select, or the text of relevant pages. Images, handwriting strokes, and whole PDF files are not sent. The content goes directly from your device to the provider, not through Folium. The provider also receives your API key to verify who you are. The provider handles all of this under its own privacy policy. If you enter a local or custom address (for example Ollama on another computer), the content goes to that address over your network. The app does not require that connection to be encrypted, so enter only addresses you trust.</li>
+        <li><strong>API keys</strong>: stored in your device’s Keychain and never sent to the developer. By default, your keys and your provider list (addresses and chosen models) sync through iCloud Keychain to your other devices signed in to the same Apple Account. You can turn this off in Settings &gt; AI with “Sync Keys to My Other Devices”.</li>
         <li><strong>Consent</strong>: the app asks for your consent before it first sends anything to each provider, on each device.</li>
         <li><strong>Turn AI off</strong>: go to Settings &gt; AI and turn off “Use AI”.</li>
         <li><strong>Withdraw consent</strong>: go to Settings &gt; AI and remove the provider. Its key and consent record are deleted, and the app asks again the next time.</li>
@@ -184,7 +184,7 @@
       <ul>
         <li><strong>时间戳</strong>：把签名值的哈希值（一串无法还原成文档内容的数字）发送到你选择的时间戳服务（DigiCert、Sectigo 或 GlobalSign），取得可信的时间。文档内容不会发送。</li>
         <li><strong>长期验证</strong>：向证书上记载的证书颁发机构查询证书状态（OCSP、CRL），发送的是证书序列号等公开信息。</li>
-        <li><strong>AI 功能</strong>：只有在你选了云端或本机服务商并同意之后，才会把你选的内容发送给那家服务商。细节见“AI 功能”。</li>
+        <li><strong>AI 功能</strong>：你添加服务商并点“连接测试”时，本 App 会把你的 key 发送给那家服务商，确认 key 可用并列出模型，不含文档内容。文档内容要等你在同意界面点同意之后，才会发送。细节见“AI 功能”。</li>
       </ul>
       <p>这些服务会收到你的 IP 地址等一般连接信息，由各服务依照它们的隐私政策处理。</p>
 
@@ -192,8 +192,8 @@
       <p>AI 是可选功能，你可以随时关闭。</p>
       <ul>
         <li><strong>Apple 设备上的模型</strong>：在你的设备上处理，内容不会离开设备。</li>
-        <li><strong>云端或本机服务商</strong>（例如 OpenAI、Anthropic、Google Gemini、OpenRouter、DeepSeek、MiniMax，或你自己电脑上的 Ollama）：只会收到你选择发送的内容，也就是你的问题、你选取的文字，或相关页面的文字。不会发送图片、手写笔迹或整份 PDF 文件。内容直接从你的设备发送给服务商，不经过 Folium。服务商也会收到你的 API key，用来确认你的身份。这些内容由该服务商依照它自己的隐私政策处理。</li>
-        <li><strong>API key</strong>：存储在你设备的钥匙串里，不会发送给开发者。如果你开启“同步 key 到我的其他设备”，会通过 iCloud 钥匙串同步到你自己的其他设备。</li>
+        <li><strong>云端或本机服务商</strong>（例如 OpenAI、Anthropic、Google Gemini、OpenRouter、DeepSeek、MiniMax，或你自己电脑上的 Ollama）：只会收到你选择发送的内容，也就是你的问题、你选取的文字，或相关页面的文字。不会发送图片、手写笔迹或整份 PDF 文件。内容直接从你的设备发送给服务商，不经过 Folium。服务商也会收到你的 API key，用来确认你的身份。这些内容由该服务商依照它自己的隐私政策处理。如果你填的是本机或自定义地址（例如另一台电脑上的 Ollama），内容会经你的网络发送到那个地址。本 App 不要求这条连接加密，请只填你信任的地址。</li>
+        <li><strong>API key</strong>：存储在你设备的钥匙串里，不会发送给开发者。默认会通过 iCloud 钥匙串，把 key 和服务商列表（含地址与所选模型）同步到登录同一个 Apple 账户的其他设备。你可以在“设置 &gt; AI”关闭“同步 key 到我的其他设备”。</li>
         <li><strong>同意</strong>：每一台设备第一次要发送给某家服务商之前，本 App 会先请你同意。</li>
         <li><strong>关闭 AI</strong>：到“设置 &gt; AI”关闭“使用 AI”。</li>
         <li><strong>撤回同意</strong>：到“设置 &gt; AI”删除那家服务商，它的 key 和同意记录会一并删除，下次使用要重新同意。</li>
@@ -246,7 +246,7 @@
       <ul>
         <li><strong>タイムスタンプ</strong>：信頼できる時刻を取得するため、署名値のハッシュ値（書類の内容に戻すことのできない数値）を、お客様が選んだタイムスタンプサービス（DigiCert、Sectigo、GlobalSign）に送信します。書類の内容は送信されません。</li>
         <li><strong>長期検証</strong>：証明書に記載された認証局に証明書の状態（OCSP、CRL）を問い合わせます。送信されるのは証明書のシリアル番号などの公開情報です。</li>
-        <li><strong>AI 機能</strong>：お客様がクラウドまたはローカルの AI サービスを選び、同意した場合に限り、お客様が選んだ内容をそのサービスに送信します。詳しくは「AI 機能」をご覧ください。</li>
+        <li><strong>AI 機能</strong>：サービスを追加して接続テストを行うと、キーの確認とモデルの一覧表示のため、API キーがそのサービスに送信されます。書類の内容は含まれません。書類の内容は、同意画面で同意した後にだけ送信されます。詳しくは「AI 機能」をご覧ください。</li>
       </ul>
       <p>これらのサービスは、お客様の IP アドレスなどの一般的な接続情報を受け取り、各サービスのプライバシーポリシーに従って取り扱います。</p>
 
@@ -254,8 +254,8 @@
       <p>AI 機能は任意で、いつでもオフにできます。</p>
       <ul>
         <li><strong>Apple のデバイス上のモデル</strong>：お客様のデバイス上で処理され、内容がデバイスの外に出ることはありません。</li>
-        <li><strong>クラウドまたはローカルの AI サービス</strong>（OpenAI、Anthropic、Google Gemini、OpenRouter、DeepSeek、MiniMax、お客様自身のコンピュータ上の Ollama など）：受け取るのは、お客様が送信を選んだ内容、つまりご質問、選択したテキスト、関連するページのテキストだけです。画像、手書きの筆跡、PDF ファイル全体は送信しません。内容はお客様のデバイスからサービスに直接送信され、Folium を経由しません。サービスは、本人確認のためにお客様の API キーも受け取ります。これらは各サービスのプライバシーポリシーに従って取り扱われます。</li>
-        <li><strong>API キー</strong>：お客様のデバイスのキーチェーンに保存され、開発者に送信されることはありません。「キーを他のデバイスに同期」をオンにすると、iCloud キーチェーンを通じてお客様の他のデバイスに同期されます。</li>
+        <li><strong>クラウドまたはローカルの AI サービス</strong>（OpenAI、Anthropic、Google Gemini、OpenRouter、DeepSeek、MiniMax、お客様自身のコンピュータ上の Ollama など）：受け取るのは、お客様が送信を選んだ内容、つまりご質問、選択したテキスト、関連するページのテキストだけです。画像、手書きの筆跡、PDF ファイル全体は送信しません。内容はお客様のデバイスからサービスに直接送信され、Folium を経由しません。サービスは、本人確認のためにお客様の API キーも受け取ります。これらは各サービスのプライバシーポリシーに従って取り扱われます。ローカルまたはカスタムのアドレス（別のコンピュータ上の Ollama など）を入力した場合、内容はお客様のネットワーク経由でそのアドレスに送信されます。本アプリはこの接続の暗号化を必須にしていません。信頼できるアドレスだけを入力してください。</li>
+        <li><strong>API キー</strong>：お客様のデバイスのキーチェーンに保存され、開発者に送信されることはありません。初期設定では、キーとサービスの一覧（アドレスと選んだモデルを含む）が、同じ Apple アカウントでサインインしているお客様の他のデバイスに iCloud キーチェーンで同期されます。「設定 &gt; AI」の「キーを他のデバイスに同期」でオフにできます。</li>
         <li><strong>同意</strong>：各サービスへ初めて送信する前に、デバイスごとに本アプリが同意をお尋ねします。</li>
         <li><strong>AI をオフにする</strong>：「設定 &gt; AI」で「AIを使う」をオフにします。</li>
         <li><strong>同意を取り消す</strong>：「設定 &gt; AI」でそのサービスを削除します。キーと同意の記録も削除され、次に使うときに改めて同意をお尋ねします。</li>
