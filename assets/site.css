@@ -159,6 +159,7 @@ h3 { font-size: 1.2rem; line-height: 1.5; font-weight: 700; letter-spacing: .03e
 .button svg { width: 16px; height: 16px; }
 .soon { font: 500 14px/1.4 var(--sans); color: var(--ink-2); letter-spacing: .05em; }
 .soon b { color: var(--ink); font-weight: 600; }
+.soon a { color: var(--ink); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
 
 .hero-art { position: relative; margin: 0; }
 .hero-art svg { width: 100%; height: auto; overflow: visible; }
