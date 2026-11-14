@@ -466,3 +466,11 @@ h3 { font-size: 1.2rem; line-height: 1.5; font-weight: 700; letter-spacing: .03e
 .doc-page .english, .doc-page .lang-section { scroll-margin-top: 84px; }
 .doc-page [lang="zh-Hans"] { --serif: "Noto Serif SC", "Songti SC", serif; --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif; }
 .doc-page [lang="ja"] { --serif: "Noto Serif JP", "Hiragino Mincho ProN", serif; --sans: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif; }
+
+/* ── 這次更新（內容由 assets/whats-new.js 從 App Store 抓）── */
+.whats-new .slip { text-align: left; }
+.whats-new .eyebrow, .whats-new h2, .whats-new .wn-date { text-align: center; }
+.whats-new .wn-date { margin-top: 6px; font-size: 14px; color: var(--ink-3); }
+.whats-new .wn-notes { margin: 20px 0 0; padding-left: 1.2em; display: grid; gap: 10px; color: var(--ink-2); line-height: 1.7; }
+.whats-new .button { display: inline-flex; }
+.whats-new p:last-child { text-align: center; }
